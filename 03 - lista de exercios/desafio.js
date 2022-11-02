@@ -9,6 +9,20 @@
     - Média entre 5 e 7, recuperação;
     - Média acima de 7, passou de semestre;
 */
+const nota1 = 9;
+const nota2 = 9;
+const nota3 = 7;
+
+const media = (nota1 + nota2 + nota3) / 3;
+console.log(media);
+
+if (media<5){
+    console.log('Reprovado');
+}else if(media>=5 && media<=7){
+    console.log('Recuperacao');
+}else{
+    console.log('Aprovado');
+}
 
 /*
     2) O IMC – Indice de Massa Corporal é um critério da Organização Mundial de Saúde para dar uma indicação sobre a condição de peso de uma pessoa adulta. 
@@ -25,6 +39,22 @@
     - Entre 30 e 40 Obeso;
     - Acima de 40 Obsesidade Grave;
 */
+const peso = 90;
+const altura = 1.70;
+const imc = peso/Math.pow(altura,2);
+console.log(imc);
+
+if(imc < 18.5){
+    console.log('Abaixo do peso');
+}else if (imc <= 18 && imc < 25){
+    console.log('Peso normal');
+}else if (imc >= 25 && imc < 30){
+    console.log('Acima do peso');
+}else if (imc >= 30 && imc < 40){
+    console.log('Obeso');
+}else{
+    console.log('Obesidade Grave');
+}
 
 /*
     3) Elabore um algoritmo que calcule o que deve ser pago por um produto, considerando o preço normal de etiqueta e a escolha da condição de pagamento. 
@@ -36,3 +66,15 @@
     - Em duas vezes, preço normal de etiqueta sem juros;
     - Acima de duas vezes, preço normal de etiqueta mais juros de 10%;
 */
+const precoEtiqueta = 100;
+const formaDePagamento = 4;
+
+if(formaDePagamento===1){
+    console.log(precoEtiqueta*0.9);
+}else if(formaDePagamento===2){
+    console.log(precoEtiqueta*0.85);
+}else if(formaDePagamento===3){
+    console.log(precoEtiqueta/2);
+}else {
+    console.log(precoEtiqueta*1.1);
+}
