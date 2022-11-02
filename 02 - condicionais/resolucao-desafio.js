@@ -8,18 +8,17 @@
 //  5 - Distância em KM da viagem;
 
 // Imprima no console o valor que será gasto para realizar esta viagem.
-const precoEtanol = 5.79;
-const precoGasolina = 6.66;
-const kmPorLitros = 10;
+//Feito uma alteração pois o consumo de alcool é diferente de gasolina.
+const precoEtanol = 3.79;
+const precoGasolina = 5.12;
+const kmPorLitrosGasolina = 10;
+const kmPorLitrosEtanol = 8;
 const distanciaEmKm = 100;
-const tipoCombustivel = 'Gasolina';
 
-const litrosConsumidos = distanciaEmKm / kmPorLitros;
+  const valorGastoEtanol = (distanciaEmKm / kmPorLitrosEtanol) * precoEtanol;
+  console.log( 'Gasto com Etanol:');
+  console.log( valorGastoEtanol.toFixed(2));
 
-if (tipoCombustivel === 'Etanol') {
-  const valorGasto = litrosConsumidos * precoEtanol;
-  console.log(valorGasto.toFixed(2));
-} else {
-  const valorGasto = litrosConsumidos * precoGasolina;
-  console.log(valorGasto.toFixed(2));
-}
+  const valorGastoGasolina = (distanciaEmKm / kmPorLitrosGasolina) * precoGasolina;
+  console.log( 'Gasto com Gasolina:');
+  console.log(valorGastoGasolina.toFixed(2));
